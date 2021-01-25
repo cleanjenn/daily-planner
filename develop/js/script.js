@@ -6,7 +6,7 @@
 
 // add functions for hours and button
 let saveBtn = $('.saveBtn');
-currentHour = moment().formant('HH');
+currentHour = moment().format('HH');
 currentHourInt = parseInt(currentHour);
 
 //add attributes for hours to be rendered by moment format
@@ -47,4 +47,15 @@ $(document).ready(function() {
         }
     }
 
+    saveBtn.on("click", function () {
+        let rowHour = $(this).attr("data-hour");
+        let input = $("#" + rowHour + "Row").val();
+        localStorage.setItem(rowHour, input);
+    });
+
+    function renderPlans() {
+        for (let i = 0; i <= 12; i++) {
+            $("#" + i + "Row").val(localStorage.getItem(i));
+        }
+    }
 });

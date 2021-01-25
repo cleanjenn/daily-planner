@@ -1,7 +1,7 @@
 :root {
---primary-color: var(--primary-color);
+--primary-color: black;
 --secondary-color: #cfcdcd;
---past-color: var(--secondary-color);
+--past-color: #ffffff;
 --present-color: #ff0000;
 --future-color: #00e900;
 }
@@ -61,7 +61,7 @@ textarea{
 }
 
 .future {
-  background-color:var(--future-color);
+  background-color: var(--future-color);
   color: var(--primary-color);
 }
 
