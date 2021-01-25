@@ -24,7 +24,7 @@ $("#5Row").attr("data-time", moment("5:00 pm", "h:mm a").format("HH"));
 $(document).ready(function() {
     renderPlans();
 
-    $('currentDay').append();
+    $("#currentDay").append();
 
     function addDate() {
         $("#currentDay").html(moment().format('MMMM Do YYYY, h:mm a'));
@@ -48,8 +48,8 @@ $(document).ready(function() {
     }
 
     saveBtn.on("click", function () {
-        let rowHour = $(this).attr("data-hour");
-        let input = $("#" + rowHour + "Row").val();
+        rowHour = $(this).attr("data-hour");
+        input = $("#" + rowHour + "Row").val();
         localStorage.setItem(rowHour, input);
     });
 
